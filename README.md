@@ -47,19 +47,26 @@ The configuration details of each machine may be found below.
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Jump Box machine can accept SSH connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+-97.118.9.177 (My personal IP)
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the networks can only be SSH'd by the Jump Box. This applies to the ELK Server as well. The SSH policies for the servers can be summarized as:
+| Name     | Publicly Accesible | Allowed IPs  |
+|----------|--------------------|--------------|
+| Jump Box | Yes                | 97.118.9.177 |
+| Web1     | No                 | 10.1.0.8     |
+| Web2     | No                 | 10.1.0.8     |
+| ELK-VM   | No                 | 10.1.0.8     |
 
-A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+
+For the use of the other services, a summary of the access policies in place can be found in the table below.
+
+| Name   | Port | Allowed IPs  | Purpose |
+|--------|------|--------------|---------|
+| Web1   | 80   | 97.118.9.177 | DVWA    |
+| Web2   | 80   | 97.118.9.177 | DVWA    |
+| ELK-VM | 5601 | 97.118.9.177 | Kibana  |
 
 ### Elk Configuration
 
