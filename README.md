@@ -111,6 +111,6 @@ Likewise, to install filebeat and metricbeat onto the Web servers:
 - Copy [their](/Ansible/filebeat-playbook.yml) corresponding [files](/Ansible/metricbeat-playbook.yml) into /etc/ansible
 - Update the *hosts* file to include a [webservers] host collection
 - Include <Web.VM.Internal.IP> ansible_python_interpreter=/usr/bin/python3 for each Web server we want the beats on
-- Run the playbook, and check the corresponding logs or metrics part of kibana to verify that they work.
+- Run the playbook, and check the corresponding logs or metrics tab in kibana to verify that they work.
 
 
