@@ -4,7 +4,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![alt text](/Diagrams/Network-Diagram-2-ELK.png "ELK-Network-Diagram")
 
-In total, it consists of 4 VMs. One acting as a jump-box and provisioner for the others. Two machines behind a load balancer hosting DVWA to the internet. One final machine collecting logs about the two Web machines
+In total, it consists of 4 VMs. One acting as a jump-box and provisioner for the others. Two machines behind a load balancer hosting DVWA to the internet. One final machine collecting logs about the two Web machines. All use Docker to run containers that aid in completing their tasks.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat.
 
