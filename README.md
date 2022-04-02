@@ -101,12 +101,14 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 - Copy the [ELK setup playbook](/Ansible/elk-setup.yml) into /etc/ansible
-- Update the *hosts* file to include an [elk] hosts collection, followed by {ELK server IP} ansible_python_interpreter=/usr/bin/python3
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Update the *hosts* file to include an [elk] hosts collection
+- Inlcude by <ELK.VM.Internal.IP> ansible_python_interpreter=/usr/bin/python3 underneath the elk hosts header
+- Run the playbook, and navigate to http://<ELK.VM.External.IP>:5601/app/kibana to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+Likewise, to install filebeat and metricbeat onto the Web servers:
+- Copy [their](/Ansible/filebeat-playbook.yml) corresponding [files](/Ansible/metricbeat-playbook.yml) into /etc/ansible
+- Update the *hosts* file to include a *webservers* host collection
+- Include <Web.VM.Internal.IP> ansible_python_interpreter=/usr/bin/python3 for each Web server we want the beats on
+- Run the playbook, and check the corresponding logs or metrics part of kibana to verify that they work.
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+
