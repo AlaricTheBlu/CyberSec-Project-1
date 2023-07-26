@@ -53,12 +53,12 @@ Only the Jump Box machine can accept SSH connections from the Internet. Access t
 -97.118.9.177 (My personal IP)
 
 Machines within the networks can only be SSH'd by the Jump Box. This applies to the ELK Server as well. The SSH policies for the servers can be summarized as:
-| Name     | Publicly Accesible | Allowed IPs  |
-|----------|--------------------|--------------|
-| Jump Box | Yes                | 97.118.9.177 |
-| Web1     | No                 | 10.1.0.8     |
-| Web2     | No                 | 10.1.0.8     |
-| ELK-VM   | No                 | 10.1.0.8     |
+| Name     | Publicly Accesible | Allowed IPs       |
+|----------|--------------------|-------------------|
+| Jump Box | Yes                | 97.118.9.177 (me) |
+| Web1     | No                 | 10.1.0.8          |
+| Web2     | No                 | 10.1.0.8          |
+| ELK-VM   | No                 | 10.1.0.8          |
 
 
 
